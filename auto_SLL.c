@@ -38,10 +38,10 @@ void Auto_insert(int x){
             p = p->next;
         }
 
-        if(p == head && p->next != NULL){
+        if(p == head && p->data >= x){
             new->next = p;
             head = new;
-        }else if(p->next == NULL){
+        }else if(p->next == NULL && p->data < x){
             p->next = new;
             new->next = NULL;
         }else{
